@@ -3,6 +3,17 @@
 ## Setup ##
 **Requires:** Node.js, LTS v24.21.0 (https://nodejs.org/en/download)
 
+1. Navigate to repo
+2. Install dependencies 
+```bash
+npm install
+```
+3. Start local dev server 
+```bash
+npm run dev
+```
+4. Navigate to site: http://localhost:4321
+
 ### Commands ###
 All commands are run from the root of the project, from a terminal:
 
