@@ -4,6 +4,7 @@ description: What is NSDF?
 tableOfContents: false
 ---
 <p class="page-eyebrow">Overview</p>
+<!-- Box containing: "What is NSDF?" -->
 <section class="section-card">
     <div class="section-banner">
         <img class="section-banner__image" src="/src/assets/intro/hero-space-crop.jpg" alt="Satellite dish connected to a scientific data network"/>
@@ -31,4 +32,14 @@ tableOfContents: false
             <p> Connect communities, reusable services, and shared infrastructure so that scientific facilities and researchers can accomplish together what no institution can achieve alone.</p>
         </article>
     </section>
+</section>
+
+<!-- Banner Linking to the NSDF Website -->
+<section class = "nsdf-cta">
+    <div class="nsdf-cta-content">
+        <p class="nsdf-cta-eyebrow">LEARN MORE</p>
+        <h2>Explore the National Science Data Fabric</h2>
+        <p class="nsdf-cta-description"> Learn more about NSDF’s services, resources, and community.</p>
+        <a class="nsdf-cta__button" href="https://nationalsciencedatafabric.org/" target="_blank" rel="noreferrer"> Visit NSDF.org <span aria-hidden="true">↗</span></a>
+    </div>
 </section>
