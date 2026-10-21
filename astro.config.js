@@ -30,11 +30,15 @@ export default defineConfig({
       sidebar: [
         {
           label: "Home",
-          autogenerate: { directory: "intro" }, /* change to intro */
+          items: [
+           { autogenerate: { directory: "intro" } }, /* change to intro */
+          ],
         },
         {
           label: "User Services",
-          autogenerate: { directory: "requirements" },
+          items: [
+            { autogenerate: { directory: "requirements" } },
+          ],
         },
       ],
     }),

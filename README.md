@@ -12,7 +12,7 @@ npm install
 ```bash
 npm run dev
 ```
-4. Navigate to site: http://localhost:4321
+4. Navigate to site: http://localhost:4322
 
 ### Commands ###
 All commands are run from the root of the project, from a terminal:
