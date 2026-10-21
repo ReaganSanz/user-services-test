@@ -5,7 +5,7 @@
 
 1. Clone and Navigate to repo
 ```bash 
-git clone https://github.com/ReaganSanz/user-services-test.git
+git clone https://github.com/nsdf-fabric/WG_user_services.git
 ```
 2. Install dependencies 
 ```bash
