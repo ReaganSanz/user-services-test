@@ -1,24 +1,47 @@
 /* Custom Style Sheet to go alongside Starlight */
 
 
-/*////        GLOBAL            /////*/
+/* ==========================================================
+   Global Styles
+   ========================================================== */
 /* Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
 :root {
-  /* Body font */
-  --sl-font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  
-  /* Code blocks font*/
-  --sl-font-mono: 'JetBrains Mono', monospace;
+  --sl-sidebar-width: 15rem; /* side bar width */
+  --sl-content-width: 55rem; /* body width */
+  --sl-font: "Inter", system-ui, sans-serif;
+  --sl-color-accent-low: #dbeafe;
+  --sl-color-accent: #2563eb;
+  --sl-color-accent-high: #062b5c;
+  --sl-color-text: #172033;
+  --sl-color-text-accent: #1d4ed8;
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #f8fafc;
 }
-/* header font */
-h1, h2, h3, h4, .site-title {
-  font-family: 'Plus Jakarta Sans', var(--sl-font);
-  letter-spacing: -0.02em;
+/* Default Header and paragraph styles */
+.sl-markdown-content h1 {
+  margin-bottom: 0.6rem;
+  color: #101828;
+  font-size: clamp(2.25rem, 5vw, 3.35rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+.sl-markdown-content h2 {
+  color: #172033;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+.sl-markdown-content p {
+  color: #465166;
+  font-size: 1.04rem;
+  line-height: 1.75;
 }
 
-
-/*////        HEADER            /////*/
+/* ==========================================================
+   Header and Sidebar Styles
+   ========================================================== */
 /* Removes Color Theme Selector */
 starlight-theme-select{
     display: none !important;
@@ -30,4 +53,142 @@ starlight-theme-select{
 }
 .site-title:hover {
   color: #0055a5 !important;
+}
+/* sidebar link */
+[aria-current="page"] {
+  border-radius: 0.5rem;
+  background: #e8f1ff !important;
+  color: #164e98 !important;
+  font-weight: 600;
+}
+/* Eyebrow label above page headings. */
+.page-eyebrow {
+  margin: 0 0 0.6rem;
+  color: #2563eb;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+
+/* ==========================================================
+   Intro Page Styles
+   ========================================================== */
+
+/* Banner */
+.section-banner {
+  position: relative;
+  height: clamp(170px, 22vw, 220px); /* box height */
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+  isolation: isolate;
+}
+.section-banner::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(90deg, rgba(2 30 49 / 82%), rgb(2 30 49 / 40%)),
+    linear-gradient(180deg, transparent 35%, rgb(2 30 49 / 45%));
+}
+.section-banner .section-banner__image { 
+  position: absolute !important;
+  z-index: 0;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover;
+}
+.section-banner .section-banner__title {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  margin: 0 !important;
+  padding: 1rem 2rem;
+  color: #fff !important;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  text-align: center;
+  text-shadow: 0 2px 20px rgb(0 0 0 / 35%);
+  transform: translate(-50%, -50%);
+}
+
+/* Section description */
+.section-card {
+  overflow: hidden;
+  margin: 2rem 0;
+  border: 1px solid #dbe4f0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 12px 30px rgb(15 23 42 / 7%);
+}
+.section-card__content {
+  padding: 1.5rem 1.75rem 1.65rem;
+  border-top: 1px solid #e8edf5;
+}
+.section-card__content p {
+  margin: 0;
+}
+
+/* Feature Boxes */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 2rem 0;
+  }
+.feature-card {
+  min-height: 185px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 1.35rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 0.9rem;
+  background: linear-gradient(145deg, #ffffff, #f6faff);
+  box-shadow: 0 6px 18px rgb(15 23 42 / 5%);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+.feature-grid > .feature-card {
+  margin-top: 0 !important; /* override default margin-top */
+}
+.feature-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 12px 28px rgb(15 23 42 / 10%);
+  transform: translateY(-3px);
+}
+.feature-card__icon {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  margin-bottom: 1.25rem;
+  border-radius: 0.7rem;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.feature-card h2 {
+  margin: 0 0 0.45rem;
+  color: #172033;
+  font-size: 1.1rem;
+}
+.feature-card p {
+  margin: 0;
+  color: #526078;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
 }
