@@ -20,7 +20,7 @@ npm run dev
 ```
 4. Navigate to site: http://localhost:4321
 
-### Commands ###
+## Commands ##
 All commands are run from the root of the project, from a terminal:
 
 | Command                   | Action                                           |
