@@ -28,8 +28,10 @@
   },
   "dependencies": {
     "astro": "^7.4.2",
+    "astro-mermaid": "^2.1.0",
     "destr": "^2.0.3",
     "fs-extra": "^11.2.0",
+    "mermaid": "^11.17.2",
     "pathe": "^1.1.2",
     "redrun": "^11.0.5"
   },

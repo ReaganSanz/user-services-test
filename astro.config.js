@@ -3,12 +3,18 @@
  Contains website header and side bar options
 */
 import { defineConfig } from "astro/config";
+import mermaid from 'astro-mermaid';
 import starlight from "@astrojs/starlight";
+
 
 // https://astro.build/config
 export default defineConfig({
   // site: "https://astro.reliverse.org",
   integrations: [
+    mermaid({
+      autoTheme: true,
+      enableLog: false,
+    }),
     starlight({
       title: "User Services",
       logo: {
