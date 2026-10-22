@@ -1,6 +1,9 @@
 # User Services 
 
-## Setup ##
+## Description ##
+NSDF User Services website. Guides users through the requirements and setup process for entry-point compute and storage use cases.
+
+## Local Setup ##
 **Requires:** Node.js, LTS v24.21.0 (https://nodejs.org/en/download)
 
 1. Clone and Navigate to repo
@@ -33,4 +36,5 @@ All commands are run from the root of the project, from a terminal:
 ## Credits ## 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
 
-Example Template from [blefnk/astro-starlight-template](https://github.com/blefnk/astro-starlight-template)
+- Example Template from [blefnk/astro-starlight-template](https://github.com/blefnk/astro-starlight-template)
+- Mermaid.js for Flowcharts/Decision Trees: [website](https://mermaid.ai/landing?utm_source=google_ads)
