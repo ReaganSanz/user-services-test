@@ -48,11 +48,11 @@ config:
 fontFamily: 'Inter'
 themeVariables:
  fontFamily: 'Inter'
- fontSize: '38px'
+ fontSize: '14px'
 look: neo
 ---
 flowchart TD
- A[Need to compute? Hold on, <br/>just testing if this applies the <br/> proper spacing and tabs <br/> and whatnot. Please work bro<br/> pleaaaase]
+ A[Need to compute? Follow <br/> the flowchart below]
  A -->|No| Z[Review Data Transfer requirements]
     A -->|Yes| B[Compute access available?]
 
@@ -109,7 +109,7 @@ themeVariables:
 look: neo
 ---
 flowchart TD
- A[Need to compute? Hold on, <br/>just testing if this applies the <br/> proper spacing and tabs <br/> and whatnot. Please work bro<br/> pleaaaase]
+ A[Need to compute? Follow <br/> the flowchart below]
  A -->|No| Z[Review Data Transfer requirements]
     A -->|Yes| B[Compute access available?]
 
