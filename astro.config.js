@@ -10,14 +10,14 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   // site: "https://astro.reliverse.org",
-
+  // for adding Mermaid code to md files
   markdown: {
       syntaxHighlight: {
         type: 'shiki',
         excludeLangs: ['mermaid'],
       },
     },
-    
+
   integrations: [
     mermaid({
       autoTheme: true,
@@ -41,17 +41,19 @@ export default defineConfig({
         discord: "https://discord.gg/C4Z46fHKQ8",
       },
       */
+      // Side bar options
       sidebar: [
         {
           label: "Home",
           items: [
-           { autogenerate: { directory: "intro" } }, /* change to intro */
+           { autogenerate: { directory: "intro" } }, 
           ],
         },
         {
           label: "User Services",
           items: [
             { autogenerate: { directory: "requirements" } },
+            { autogenerate: { directory: "use_cases" } },
           ],
         },
       ],

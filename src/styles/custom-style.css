@@ -99,7 +99,7 @@ starlight-theme-select{
     linear-gradient(90deg, rgba(2 30 49 / 82%), rgb(2 30 49 / 40%)),
     linear-gradient(180deg, transparent 35%, rgb(2 30 49 / 45%));
 }
-.section-banner .section-banner__image { 
+.section-banner .section-banner-image { 
   position: absolute !important;
   z-index: 0;
   inset: 0 !important;
@@ -110,7 +110,7 @@ starlight-theme-select{
   margin: 0 !important;
   object-fit: cover;
 }
-.section-banner .section-banner__title {
+.section-banner .section-banner-title {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -130,17 +130,17 @@ starlight-theme-select{
 /* Section description */
 .section-card {
   overflow: hidden;
-  margin: 2rem 0;
+  margin: 0.5rem 0;
   border: 1px solid #dbe4f0;
   border-radius: 1rem;
   background: #fff;
   box-shadow: 0 12px 30px rgb(15 23 42 / 7%);
 }
-.section-card__content {
+.section-card-content {
   padding: 1.5rem 1.75rem 1.65rem;
   border-top: 1px solid #e8edf5;
 }
-.section-card__content p {
+.section-card-content p {
   margin: 0;
 }
 
@@ -169,7 +169,7 @@ starlight-theme-select{
   box-shadow: 0 12px 28px rgb(15 23 42 / 10%);
   transform: translateY(-3px);
 }
-.feature-card__icon {
+.feature-card-icon {
   display: grid;
   width: 2.35rem;
   height: 2.35rem;
@@ -207,6 +207,7 @@ starlight-theme-select{
   align-items: center;
   padding: 2.5rem 3rem;
   text-align: center;
+  margin-bottom: 2.5rem;
 }
 .nsdf-cta-content {
   max-width: 42rem;
@@ -233,7 +234,7 @@ starlight-theme-select{
   font-size: 1.05rem !important;
   line-height: 1.6;
 }
-.nsdf-cta__button {
+.nsdf-cta-button {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
@@ -250,22 +251,70 @@ starlight-theme-select{
   box-shadow: 0 5px 14px rgb(0 0 0 / 16%);
   transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
 }
-.nsdf-cta__button:hover {
+.nsdf-cta-button:hover {
   background: #eaf2ff;
   color: #051932 !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgb(0 0 0 / 22%);
 }
-.nsdf-cta__button:focus-visible {
+.nsdf-cta-button:focus-visible {
   outline: 3px solid #93c5fd;
   outline-offset: 3px;
 }
-.nsdf-cta__button span {
+.nsdf-cta-button span {
   font-size: 1.1em;
   transition: transform 160ms ease;
 }
-.nsdf-cta__button:hover span {
+.nsdf-cta-button:hover span {
   transform: translate(2px, -2px);
+}
+
+/* User Services Links Box */
+.service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.25rem;
+}
+.services-section {
+  margin: 2.75rem 0;
+  padding: 1.5rem 1.75rem 1.65rem;
+}
+.services-section h2 {
+  margin: 0;
+}
+.services-section-lead {
+  margin: 0.65rem 0 0;
+}
+.service-card {
+  display: flex;
+  min-height: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+.service-card h3 {
+  margin: 0 0 0.45rem;
+  color: #172033;
+  font-size: 1.1rem;
+}
+.service-card p {
+  margin: 0;
+  color: #526078;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+.service-card-link {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.service-card:hover .service-card-link span {
+  display: inline-block;
+  transform: translateX(3px);
 }
 
 /* media limits for mobile view on Intro Page */
@@ -277,6 +326,11 @@ starlight-theme-select{
 }
 @media (max-width: 900px) {
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .service-grid {
     grid-template-columns: 1fr;
   }
 }
