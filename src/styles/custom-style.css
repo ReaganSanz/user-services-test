@@ -33,10 +33,18 @@
   font-weight: 700;
   letter-spacing: -0.025em;
 }
-.sl-markdown-content p {
+/* Formatting for <p> does not include mermaid diagrams*/
+.sl-markdown-content p:not(.nodeLabel p):not(.edgeLabel p) {
   color: #465166;
   font-size: 1.04rem;
   line-height: 1.75;
+}
+.mermaid .nodeLabel p,
+.mermaid .edgeLabel p {
+  margin: 0 !important;
+  color: inherit !important;
+  font-size: 12px !important;
+  line-height: 1.75 !important;
 }
 
 /* ==========================================================
@@ -273,4 +281,144 @@ starlight-theme-select{
   .feature-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ==========================================================
+   Requirements Page Styles
+   ========================================================== */
+.requirements-intro {
+  max-width: 48rem;
+  margin: 0 0 2.5rem;
+}
+.requirements-intro p {
+  margin: 0;
+}
+
+/* Use Case Cards */
+.use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 0 0 3.5rem;
+}
+/* Overrides Starlight's default spacing */
+.use-case-grid > .use-case-card {
+  margin-top: 0 !important;
+}
+.use-case-card {
+  display: block;
+  min-width: 0;
+  padding: 1.5rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 1rem;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgb(15 23 42 / 5%);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+.use-case-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 12px 28px rgb(15 23 42 / 10%);
+  transform: translateY(-3px);
+  background: linear-gradient(145deg, #f8fbff, #eef6ff);
+}
+.use-case-card-icon {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  place-items: center;
+  background: #dbeafe;
+  color: #1d4ed8;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.use-case-card h2 {
+  margin: 0 0 0.4rem !important;
+  color: #172033;
+  font-size: 1.2rem;
+}
+.use-case-card p {
+  margin: 0 !important;
+  color: #526078 !important;
+  font-size: 0.96rem !important;
+  line-height: 1.6 !important;
+}
+.use-case-card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #1d4ed8;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Requirements Sections: Compute and Storage */
+.requirements-section {
+  margin-top: 0.5rem;
+}
+.requirements-section-eyebrow {
+  margin: 5rem 0 0.5rem !important;
+  color: #2563eb !important;
+  font-size: 0.75rem !important;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.requirements-section h2 {
+  margin: 0 0 0.65rem !important;
+  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+.requirements-section-lead {
+  max-width: 45rem;
+  margin: 0 0 1.5rem !important;
+}
+.decision-guide {
+  margin: 0;
+  padding: 1.4rem;
+  border: 1px solid #dbe4f0;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #fff 35%);
+  box-shadow: 0 12px 30px rgb(15 23 42 / 6%);
+}
+.decision-guide-header {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e4ebf5;
+}
+.decision-guide-header h3 {
+  margin: 0 0 0.3rem !important;
+  color: #172033;
+  font-size: 1.05rem;
+}
+.decision-guide-header p {
+  margin: 0 !important;
+  color: #526078 !important;
+  font-size: 0.92rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Mermaid block (decision tree)*/
+.decision-guide-diagram {
+  overflow-x: auto;
+  padding: 0.5rem 0 0;
+}
+
+/* Additional Help box */
+.requirements-help {
+  margin: 1.5rem 0 0;
+  padding: 1.1rem 1.25rem;
+  border-left: 3px solid #2563eb;
+  border-radius: 0 0.75rem 0.75rem 0;
+  background: #f4f8ff;
+  color: #465166;
+}
+.requirements-help p {
+  margin: 0 !important;
+}
+.requirements-help a {
+  color: #1d4ed8;
+  font-weight: 700;
 }

@@ -10,6 +10,14 @@ import starlight from "@astrojs/starlight";
 // https://astro.build/config
 export default defineConfig({
   // site: "https://astro.reliverse.org",
+
+  markdown: {
+      syntaxHighlight: {
+        type: 'shiki',
+        excludeLangs: ['mermaid'],
+      },
+    },
+    
   integrations: [
     mermaid({
       autoTheme: true,
